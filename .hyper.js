@@ -103,23 +103,23 @@ module.exports = {
     //
     // PowerShell on Windows
     // - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
-    shell: 'C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe',
+    shell: '',
 
     // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
     // by default `['--login']` will be used
-    shellArgs: ["-ExecutionPolicy", "Bypass", "-NoLogo", "-NoProfile", "-NoExit", "-Command", "Invoke-Expression '. $env:ConEmuDir''\\..\\profile.ps1'''"], //cmder for powershell
+    //shellArgs: ["-ExecutionPolicy", "Bypass", "-NoLogo", "-NoProfile", "-NoExit", "-Command", "Invoke-Expression '. $env:ConEmuDir''\\..\\profile.ps1'''"], //cmder for powershell
     //shellArgs: ['/k', '%ConEmuDir%\\..\\init.bat'], cmder for cmd
+  shellArgs: ['-i','--login'],
     //shellArgs: [''], //default args
     // for environment variables
     env: {
       'TERM':'cygwin',
       'HYPER_PASTE_SEPARATOR': ' & ',
-      'ConEmuDir': 'C:\\Program Files\\Cmder\\vendor\\conemu-maximus5'
     },
 
     // set to `false` for no bell
     //bell: 'SOUND',
-    bell: 'false',
+    bell: 'SOUND',
     // if `true` (without backticks and without quotes), selected text will automatically be copied to the clipboard
     copyOnSelect: true,
 
